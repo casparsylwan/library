@@ -1,13 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Books ></Books>
   </div>
 </template>
 <script>
+  import Books from '../components/books';
+  
+
   export default {
     name: 'about',
       components: {
-    
+        Books
     }
   }
 </script>

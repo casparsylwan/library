@@ -19,7 +19,7 @@ Vue.use(VueRouter)
     component: about
   },
   {
-    path: '/blog',
+    path: '/blog/:id',
     name: 'blog',
     component: blog
   },
