@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    hem
-    
+  <div class="blog">
+    blog
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'blog',
   components: {
     
   }
+
 }
 </script>
 <style scoped lang="scss">
