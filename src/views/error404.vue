@@ -1,6 +1,6 @@
 <template>
   <div class="error">
-    missingpage
+    missingpage 404
   </div>
 </template>
 
