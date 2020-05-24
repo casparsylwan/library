@@ -16,7 +16,10 @@
         <h1>{{ info.title }}</h1>
         <p> by {{ info.author }} </p>
         <section>
+          <p>
           {{ info.plot }}
+          </p>
+
           <div class="info">
             <p> pages: {{ info.pages }}  </p>
             <p> audience: {{ info.audience }} </p>
@@ -45,6 +48,7 @@ export default {
   components: {
     Book   
   },
+  props:[],
     data(){
         return{
             info: json.books[this.$route.params.id-1],
@@ -112,10 +116,26 @@ export default {
       h1{
         font-weight: bolder;
         font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+     
+      
+
+      section{ 
+        
+        margin-top: 1rem;
+
+        p{
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        
+        }
       }
 
       .info{
         background-color: lighten($color: #000000, $amount: 10%);
+        margin: 1rem 0 1rem 0;
         padding: 1rem;
         display: grid;
         grid-template-columns: repeat(2,1fr);
