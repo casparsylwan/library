@@ -1,8 +1,8 @@
 <template>
   <div class="books">
-      <!--
-      <h1>Hej</h1>
-      -->
+      
+      <h1>8 classic childrens books</h1>
+      
       <div class="container">
         
         <div 
@@ -43,6 +43,13 @@ export default {
 
 </script>
 <style scoped lang="scss">
+
+    h1{
+        font-size:2rem;
+        font-weight: bold;
+        background-color: #fff;
+        padding-left: 2rem;
+    }
 
     .container{
         display: grid;

@@ -1,8 +1,7 @@
 <template>
   <div class="book">
     <div 
-        class="cover" 
-        
+        class="cover"         
         :style='setGradientColor(info.color)'>
         <div class="border">
             <section class="title">

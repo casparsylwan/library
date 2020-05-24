@@ -29,8 +29,7 @@
             <p> year: {{ info.year }} </p>
           </div>
           <div class="btn">
-            <p>Lend book</p>
-            
+            <p>Oh, I want to read it!</p>            
           </div>
         </section>
       </div>
@@ -156,21 +155,19 @@ export default {
       }
 
       .btn{
-        height: 2rem;
-        width: 30%;
+       
+        width: 40%;
         border-radius: 10px;
         background-color: #fff;
         color:#000;
-        padding: 1%;
+        padding: 2%;
         text-align: center;
 
         p{
-          font-size: 1.5rem;
+          font-size: 1.2rem;
+          font-weight: bold;
         }
           
-        
-
-       
       }
 
     }
