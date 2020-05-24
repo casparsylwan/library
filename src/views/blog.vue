@@ -2,11 +2,13 @@
   <div class="blog">
     <div class="box">
       <div class="top">
+        <router-link to="/about">
           <div class="arrow-back">
             <p>
               &#8592; 
             </p>
           </div>
+        </router-link>
         </div>
       <div class="left">
       
