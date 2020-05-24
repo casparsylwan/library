@@ -1,6 +1,8 @@
 <template>
   <div class="books">
+      <!--
       <h1>Hej</h1>
+      -->
       <div class="container">
         
         <div 
@@ -45,6 +47,7 @@ export default {
     .container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        background: #fff;
     }
 
     .showbooks{

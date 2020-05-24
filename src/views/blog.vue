@@ -1,5 +1,6 @@
 <template>
   <div class="blog">
+    {{ setParam() }}
     <div class="box">
       <div class="top">
         <router-link to="/about">
@@ -35,8 +36,9 @@
         </section>
       </div>
     </div>
+    <!--
     {{ $route.params.id }}
-    
+    -->
   </div>
 </template>
 
@@ -53,7 +55,8 @@ export default {
   props:[],
     data(){
         return{
-            info: json.books[this.$route.params.id-1],
+          //  info: json.books[this.$route.params.id-1],
+            info: json.books[json.books.findIndex(x => x.id == this.$route.params.id)] ,
             bookInfo:json.books
             
               }
@@ -70,6 +73,13 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+
+  .blog{
+    max-width: 60rem;
+    min-height: 100Vh;
+    margin: 0 auto;
+    background-color: #000;
+  }
 
   .box{
     padding: 2rem;
@@ -99,10 +109,13 @@ export default {
       font-size: 1.5rem;
       font-weight: bold;
       margin-bottom: 2rem;
+      
 
         p{
           margin-top: -.25rem;
         }
+
+       
     }
 
     .book{
