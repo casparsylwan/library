@@ -1,6 +1,5 @@
 <template>
   <div class="blog">
-    {{ setParam() }}
     <div class="box">
       <div class="top">
         <router-link to="/about">

@@ -1,6 +1,9 @@
 <template>
   <div class="book">
-    <div class="cover" :class="setColorClass(info.id)">
+    <div 
+        class="cover" 
+        :class="setColorClass(info.id)"
+        :style='setGradientColor(info.color)'>
         <div class="border">
             <section class="title">
                 <h2>{{ info.title }}</h2>
@@ -18,8 +21,12 @@ export default {
     
   },
   props:["info"],
-  
   methods :{
+
+      setGradientColor(color){
+          return { backgroundColor: color }
+      },
+
       setColorClass(id){
           if(id===1){
             return "yellow"  
@@ -46,13 +53,13 @@ export default {
 </script>
 <style scoped lang="scss">
 
-    $yellow:    linear-gradient(to right top, #cccc00, #cccc00, #dddd00, #eeee00, #ffff00);
-    $l-blue:    linear-gradient(to right top, #00bbbb, #00cccc, #00dddd, #00eeee, #00ffff);
-    $green:     linear-gradient(to right top, #228855, #33a469, #43c27e, #54e094, #66ffaa);
-    $brown:     linear-gradient(to right top, #aa7711, #bf8324, #d49035, #e99d45, #ffaa55);
-    $d-blue:    linear-gradient(to right top, #003388, #004fa7, #006dc5, #008be3, #00aaff);
-    $red:       linear-gradient(to right top, #882200, #a42500, #c12600, #e02500, #ff2200);
-    $purple:    linear-gradient(to right top, #540054, #6c006c, #750075, #8f008f, #aa00aa);
+     $yellow:    linear-gradient(to right top, rgba(50,50,50,1), rgba(50,50,50,0.3), rgba(100,100,100,0.3),rgba(150,150,150,0.3), rgba(255,255,255,0.3));
+    // $l-blue:    linear-gradient(to right top, #00bbbb, #00cccc, #00dddd, #00eeee, #00ffff);
+    // $green:     linear-gradient(to right top, #228855, #33a469, #43c27e, #54e094, #66ffaa);
+    // $brown:     linear-gradient(to right top, #aa7711, #bf8324, #d49035, #e99d45, #ffaa55);
+    // $d-blue:    linear-gradient(to right top, #003388, #004fa7, #006dc5, #008be3, #00aaff);
+    // $red:       linear-gradient(to right top, #882200, #a42500, #c12600, #e02500, #ff2200);
+    // $purple:    linear-gradient(to right top, #540054, #6c006c, #750075, #8f008f, #aa00aa);
 
     .book{
         display: flex;
@@ -64,24 +71,24 @@ export default {
         position: relative;
         height: 25rem;
         width: 20rem;
-        background-image: $purple;
+        background-image: $yellow;
 
-        &.yellow{
-            background-image: $yellow;
-        }
+        // &.yellow{
+        //     background-image: $yellow;
+        // }
 
-        &.l-blue{
-            background-image: $l-blue;
-        }
-        &.green{
-            background-image: $green;
-        }
-        &.brown{
-            background-image: $brown;
-        }
-        &.d-blue{
-            background-image: $d-blue;
-        }
+        // &.l-blue{
+        //     background-image: $l-blue;
+        // }
+        // &.green{
+        //     background-image: $green;
+        // }
+        // &.brown{
+        //     background-image: $brown;
+        // }
+        // &.d-blue{
+        //     background-image: $d-blue;
+        // }
 
         
 
